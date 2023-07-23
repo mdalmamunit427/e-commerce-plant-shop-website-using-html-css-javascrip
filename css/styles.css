@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --bg-color: #C1DCDC; /* color-1 */
+  --primary-color: #1e1e1e; /* color-2 */
+  --secondary-color: #1e1e1ebf; /* color-3 */
+  --text-color: #1e1e1e80; /* color-4 */
+
+  --heading-text: 2rem;
+  --defaut-text: 1.125rem;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
+
+/* <!-- header section design --> */
+header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 12px 5%;
+  border-bottom: 1px solid #f7f9fb;
+  transition: all 0.45s ease;
+}
+
+.logo {
+    width: 142px;
+    flex-wrap: nowrap;
+    margin-top: 10px;
+}
+
+.logo img {
+  width: 100%;
+  height: 39px;
+  align-items: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+    font-size: var(--defaut-text);
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 10px 25px;
+    margin: 0 5px;
+    background: transparent;
+    border-radius: 30px;
+    transition: all .45s ease;
+}
+
+.navbar a:hover{
+    background: #f7f9fb;
+    color: var(--primary-color);
+}
+
+.navbar a.active{
+    color: var(--primary-color);
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+}
+
+.icons i{
+    height: 42px;
+    width: 42px;
+    background: #f7f9fb;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-right: 25px;
+    margin-left: 10px;
+    transition: all .45s ease;
+}
+
+.icons i:hover{
+    transform: scale(0.9);
+}
+
+#menu-icon{
+    font-size: 28px;
+    color: var(--primary-color);
+    z-index: 10001;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+header.sticky{
+    background: var(--bg-color);
+    padding: 14px 11%;
+}
+
+
+@media screen and (max-width:576px){
+    .logo{
+        width: 60%;
+    }
+    #menu-icon{
+        display: initial;
+        height: 50px;
+        width: 50px;
+        margin-left: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 125vh;
+        background: var(--bg-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 30px;
+        transition: all .45s ease;
+    }
+
+    .icons i{
+        margin: 0 15px;
+    }
+    .navbar a{
+            display: block;
+            margin: 1rem 0;
+    }
+    .navbar.open{
+        right: 0;
+    }
+}
