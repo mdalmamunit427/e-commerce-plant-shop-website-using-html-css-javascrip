@@ -60,3 +60,15 @@ function myFunction(x) {
 var x = window.matchMedia("(max-width: 576px)");
 myFunction(x); // Call listener function at run time
 x.addListener(myFunction); // Attach listener function on state changes
+
+
+// animation 
+const animation = ScrollReveal({
+  distance: '60px',
+  duration: 2500,
+  delay: 400,
+  reset: true
+})
+animation.reveal('.banner-content, .products, .about, .categories, .review, footer', {delay: 200, origin: 'top'});
+animation.reveal('.banner-img, .review-container', {delay: 200, origin: 'right'});
+animation.reveal('.best-selling-content', {delay: 200, origin: 'left'});
