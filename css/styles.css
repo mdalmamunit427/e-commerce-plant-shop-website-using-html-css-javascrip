@@ -220,6 +220,74 @@ input:focus {
   height: 100%;
 }
 
+/* best selling */
+section {
+  margin: 96px 5%;
+}
+
+.best-selling {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+.best-selling-content {
+  width: 256px;
+}
+
+.best-selling-content h2 {
+  color: var(--primary-color);
+  font-size: var(--heading-text);
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 12px;
+}
+
+p {
+  color: var(--text-color);
+  font-size: var(--defaut-text);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 24px;
+}
+
+.btn {
+  padding: 12px 24px;
+  color: var(--primary-color);
+  background: var(--bg-color);
+  font-size: var(--defaut-text);
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.45 ease;
+}
+
+.btn:hover {
+  transform: translateX(-5px);
+}
+
+.products h5 {
+  color: var(--primary-color, #1e1e1e);
+  font-size: var(--defaut-text);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 12px;
+}
+
+.products {
+  cursor: pointer;
+  transition: all 0.45s ease;
+}
+
+.products:hover {
+  transform: translateY(-5px);
+}
+
 @media screen and (max-width: 576px) {
   .logo {
     width: 60%;
