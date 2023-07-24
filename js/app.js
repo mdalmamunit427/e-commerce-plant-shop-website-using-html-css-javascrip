@@ -16,3 +16,21 @@ window.onscroll = () => {
     menu.classList.remove("bx-x");
     navbar.classList.remove("open"); 
 };
+
+// review section
+
+let arrowIcon = document.getElementsByClassName('arrow-icon');
+const slide = document.getElementById('slide');
+
+arrowIcon[0].onclick = () => {
+    slide.style.transform = "translateX(0)";
+}
+arrowIcon[1].onclick = () => {
+    slide.style.transform = "translateX(-800px)";
+}
+arrowIcon[2].onclick = () => {
+    slide.style.transform = "translateX(-1600px)";
+}
+arrowIcon[3].onclick = () => {
+    slide.style.transform = "translateX(-2400px)";
+}
